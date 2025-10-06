@@ -1,0 +1,81 @@
+/* Save this as styles.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fef9f4;
+  color: #333;
+}
+
+header {
+  background-color: #ffccbc;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.products {
+  padding: 20px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #fff3e0;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #ff8a65;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.alert {
+  background-color: #ffe082;
+  padding: 20px;
+  text-align: center;
+}
+
+.cart {
+  padding: 20px;
+  background-color: #e1f5fe;
+}
+
+footer {
+  background-color: #ffccbc;
+  text-align: center;
+  padding: 10px;
+}

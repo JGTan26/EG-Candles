@@ -1,0 +1,101 @@
+<!-- Save this as index.html -->
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilaw Candles - Liwanag sa Tag-Ulan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Ilaw Candles</h1>
+    <p>Liwanag at ginhawa para sa bawat tahanang Pilipino ngayong tag-ulan</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://example.com/candle-hero.jpg" alt="Mga kandila sa maulan na gabi" />
+    <div class="hero-text">
+      <h2>Maulan na Panahon, Maliwanag na Gabi</h2>
+      <p>Dahil sa La Niña, maghanda sa malamig at maulang panahon. Magbigay init gamit ang aming kandila.</p>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <h2>Mga Tampok na Kandila</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://example.com/sampaguita-candle.jpg" alt="Sampaguita Candle" />
+        <h3>Sampaguita Serenity</h3>
+        <p>Banayad na halimuyak ng pambansang bulaklak para sa mapayapang gabi.</p>
+        <button onclick="addToCart('Sampaguita Serenity')">Idagdag sa Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://example.com/kape-candle.jpg" alt="Kape Candle" />
+        <h3>Kape Comfort</h3>
+        <p>Amoy ng sariwang kape para sa maulan na umaga.</p>
+        <button onclick="addToCart('Kape Comfort')">Idagdag sa Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://example.com/banig-candle.jpg" alt="Banig Candle" />
+        <h3>Banig Breeze</h3>
+        <p>Amoy ng banig at probinsyang ginhawa.</p>
+        <button onclick="addToCart('Banig Breeze')">Idagdag sa Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Alert -->
+  <section class="alert">
+    <h2>🌧️ Babala sa Panahon</h2>
+    <p>Mag-ingat sa paparating na bagyong Paolo. Maghanda ng kandila para sa posibleng brownout.</p>
+    <a href="https://www.pagasa.dost.gov.ph/" target="_blank">Tingnan ang PAGASA Update</a>
+  </section>
+
+  <!-- Cart -->
+  <section class="cart">
+    <h2>🛒 Iyong Cart</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Magbayad</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ilaw Candles | Gawang-Pilipinas</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      updateCart();
+      alert(item + " ay naidagdag sa iyong cart.");
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById("cart-items");
+      cartList.innerHTML = "";
+      cart.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Walang laman ang iyong cart.");
+      } else {
+        alert("Salamat sa iyong order! Makikipag-ugnayan kami para sa delivery.");
+        cart.length = 0;
+        updateCart();
+      }
+    }
+  </script>
+</body>
+</html>
